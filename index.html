@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +20,10 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <nav class="header-container">
-                <a href="./index.html" class="header-logo">
-                    Web<span class="header-logo-span">Studio</span>
-                </a>
+            <a href="./index.html" class="header-logo">
+                Web<span class="header-logo-span">Studio</span>
+            </a>
+            <nav class="header-navigation">
                 <ul class="header-list">
                     <li class="header-list-item">
                         <a href="./index.html" class="header-nav-link current">Studio</a>
@@ -36,7 +36,7 @@
                     </li>
                 </ul>
             </nav>
-            <address>
+            <address class="header-contacts">
                 <ul class="header-contacts-list">
                     <li class="header-contacts-item">
                         <a href="mailto:info@devstudio.com">info@devstudio.com</a>
@@ -46,6 +46,11 @@
                     </li>
                 </ul>
             </address>
+            <div class="burger-menu js-open-menu">
+                <svg width="32" height="22" class="icon">
+                    <use href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </div>
         </div>
     </header>
     <main>
@@ -57,7 +62,7 @@
         </section>
         <section class="feature-section section">
             <div class="container feature-container">
-                <h2 hidden class="feature-title title">What are we doing</h2>
+                <h2 hidden class="title">What are we doing</h2>
                 <ul class="feature-list">
                     <li class="feature-item">
                         <div class="feature-icon-wrap">
@@ -65,8 +70,8 @@
                                 <use href="./images/icons.svg#antenna"></use>
                             </svg>
                         </div>
-                        <h3 class="min-title feature-title">Strategy</h3>
-                        <p class="feature-item-text text">Our goal is to identify the business
+                        <h3 class="feature-title">Strategy</h3>
+                        <p class="text">Our goal is to identify the business
                         problem to walk away with the perfect and creative solution.</p>
                     </li>
                     <li class="feature-item">
@@ -75,8 +80,8 @@
                                 <use href="./images/icons.svg#clock"></use>
                             </svg>
                         </div>
-                        <h3 class="min-title feature-title">Punctuality</h3>
-                        <p class="feature-item-text text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+                        <h3 class="feature-title">Punctuality</h3>
+                        <p class="text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
                     </li>
                     <li class="feature-item">
                         <div class="feature-icon-wrap">
@@ -84,8 +89,8 @@
                                 <use href="./images/icons.svg#astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="min-title feature-title">Diligence</h3>
-                        <p class="feature-item-text text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
+                        <h3 class="feature-title">Diligence</h3>
+                        <p class="text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
                     </li>
                     <li class="feature-item">
                         <div class="feature-icon-wrap">
@@ -93,37 +98,57 @@
                                 <use href="./images/icons.svg#diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="min-title feature-title">Technologies</h3>
-                        <p class="feature-item-text text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+                        <h3 class="feature-title">Technologies</h3>
+                        <p class="text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
                     </li>
                 </ul>
             </div>
-        </section>
-        <section class="about-section section">
+        </section> 
+         <section class="about-section section">
             <div class="container about-container">
                 <h2 class="about-title title">What are we doing</h2>
                 <ul class="about-list">
                     <li class="about-item">
-                        <img src="./images/img1.jpg" class="about-list-img" width=360 alt="led">
+                        <img 
+                        srcset="./images/about/rect@1x.jpg 1x, ./images/about/rect@2x.jpg 2x"
+                        src="./images/img1.jpg" 
+                        class="about-list-img" 
+                        width=360 
+                        alt="led">
                     </li>
                     <li class="about-item">
-                        <img src="./images/img2.jpg" class="about-list-img" width=360 alt="iphone screen">
+                        <img 
+                        srcset="./images/about/rect@1x-1.jpg 1x, ./images/about/rect@2x-1.jpg 2x"
+                        src="./images/img2.jpg" 
+                        class="about-list-img" 
+                        width=360 
+                        alt="iphone screen">
                     </li>
                     <li class="about-item">
-                        <img src="./images/img3.jpg" class="about-list-img" width=360 alt="iphone in a hand">
+                        <img 
+                        srcset="./images/about/rect@1x-2.jpg 1x, ./images/about/rect@2x-2.jpg 2x"
+                        src="./images/img3.jpg" 
+                        class="about-list-img" 
+                        width=360 
+                        alt="iphone in a hand">
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
         <section class="team-section section">
             <div class="container team-container">
                 <h2 class="team-title title">Our Team</h2>
                 <ul class="team-list">
                     <li class="team-item">
-                        <img src="./images/human1.jpg" alt="Mark Guerrero" width=264>
+                        <img 
+                        srcset="./images/team/img@1x.jpg 1x, ./images/team/img@2x.jpg 2x"
+                        src="./images/team/img@1x.jpg" 
+                        alt="Mark Guerrero" 
+                        width=264 
+                        />
                         <div class="team-card-wrap">
                             <h3 class="min-title">Mark Guerrero</h3>
-                            <p class="text">Product Designer</p>
+                            <p class="text team-text">Product Designer</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a href="" class="social-item-link">
@@ -157,10 +182,15 @@
                         </div>
                     </li>
                     <li class="team-item">
-                        <img src="./images/human2.jpg" alt="Tom Ford" width=264>
+                        <img 
+                        srcset="./images/team/img@1x-1.jpg 1x, ./images/team/img@2x-1.jpg 2x"
+                        src="./images/team/img@1x-1.jpg"
+                        alt="Tom Ford" 
+                        width=264 
+                        />
                         <div class="team-card-wrap">
                             <h3 class="min-title">Tom Ford</h3>
-                            <p class="text">Frontend Developer</p>
+                            <p class="text team-text">Frontend Developer</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a href="" class="social-item-link">
@@ -194,10 +224,15 @@
                         </div>
                     </li>
                     <li class="team-item">
-                        <img src="./images/human3.jpg" alt="Camila Garcia"  width=264>
+                        <img 
+                        srcset="./images/team/img@1x-2.jpg 1x, ./images/team/img@2x-2.jpg 2x"
+                        src="./images/team/img@1x-2.jpg"
+                        alt="Camila Garcia"  
+                        width=264
+                        />
                         <div class="team-card-wrap">
                             <h3 class="min-title">Camila Garcia</h3>
-                            <p class="text">Marketing</p>
+                            <p class="text team-text">Marketing</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a href="" class="social-item-link">
@@ -231,10 +266,15 @@
                         </div>
                     </li>
                     <li class="team-item">
-                        <img src="./images/human4.jpg" alt="Daniel Wilson" width=264>
+                        <img 
+                        srcset="./images/team/img@1x-3.jpg 1x, ./images/team/img@2x-3.jpg 2x"
+                        src="./images/team/img@1x-3.jpg" 
+                        alt="Camila Garcia" 
+                        width=264 
+                        />
                         <div class="team-card-wrap">
                             <h3 class="min-title">Daniel Wilson</h3>
-                            <p class="text">UI Designer</p>
+                            <p class="text team-text">UI Designer</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a href="" class="social-item-link">
@@ -270,7 +310,7 @@
                 </ul>
             </div>
         </section>
-        <section class="customers-section section">
+         <section class="customers-section section">
             <div class="container customers-container">
                 <h2 class="title">Customers</h2>
                 <ul class="customers-list">
@@ -318,7 +358,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>  
     </main>
     <footer class="footer">
         <div class="container footer-wrap">
@@ -427,7 +467,67 @@
             </form>
         </div>
     </div>
+    <div class="burger-modal js-menu-container">
+        <button type="button" class="button burger-button modal-close-button js-close-menu">
+            <svg width="24" height="24" class="icon">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="burger-list">
+            <li class="burger-list-item">
+                <a href="./index.html" class="burger-link current">Studio</a>
+            </li>
+            <li class="burger-list-item">
+                <a href='./portfolio.html' class="burger-link ">Portfolio</a>
+            </li>
+            <li class="burger-list-item">
+                <a href='' class="burger-link">Contacts</a>
+            </li>
+        </ul>
+        <ul class="burger-contacts-list">
+            <li class="burger-contacts-item">
+                <a class="burger-phone" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="burger-contacts-item">
+                <a class="burger-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="social-list burger-social-list">
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,23 +19,23 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <nav class="header-container">
-                <a href="./index.html" class="header-logo">
-                    Web<span class="header-logo-span">Studio</span>
-                </a>
+            <a href="./index.html" class="header-logo">
+                Web<span class="header-logo-span">Studio</span>
+            </a>
+            <nav class="header-navigation">
                 <ul class="header-list">
                     <li class="header-list-item">
-                        <a href="./index.html" class="header-nav-link">Studio</a>
+                        <a href="./index.html" class="header-nav-link current">Studio</a>
                     </li>
                     <li class="header-list-item">
-                        <a href='./portfolio.html' class="header-nav-link current">Portfolio</a>
+                        <a href='./portfolio.html' class="header-nav-link">Portfolio</a>
                     </li>
                     <li class="header-list-item">
                         <a href='' class="header-nav-link">Contacts</a>
                     </li>
                 </ul>
             </nav>
-            <address>
+            <address class="header-contacts">
                 <ul class="header-contacts-list">
                     <li class="header-contacts-item">
                         <a href="mailto:info@devstudio.com">info@devstudio.com</a>
@@ -45,6 +45,11 @@
                     </li>
                 </ul>
             </address>
+            <div class="burger-menu js-open-menu">
+                <svg width="32" height="22" class="icon">
+                    <use href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </div>
         </div>
     </header>
     <main>
@@ -281,21 +286,70 @@
                         </svg>
                     </button>
                 </form>
-                <!-- <ul class="subscribe-list">
-                            <li class="subscribe-item">
-                                <input type="mail" class=""/>
-                            </li>
-                            <li class="subscribe-item">
-                                <button type="button" class="btn subscribe-btn">
-                                    Subscribe
-                                    <svg width="24" height="24">
-                                        <use href="./images/icons.svg#footer-subscribe"></use>
-                                    </svg>
-                                </button>
-                            </li>
-                        </ul> -->
             </div>
         </div>
     </footer>
+
+    <div class="burger-modal js-menu-container">
+        <button type="button" class="button burger-button modal-close-button js-close-menu">
+            <svg width="24" height="24" class="icon">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="burger-list">
+            <li class="burger-list-item">
+                <a href="./index.html" class="burger-link ">Studio</a>
+            </li>
+            <li class="burger-list-item">
+                <a href='./portfolio.html' class="burger-link current">Portfolio</a>
+            </li>
+            <li class="burger-list-item">
+                <a href='' class="burger-link">Contacts</a>
+            </li>
+        </ul>
+        <ul class="burger-contacts-list">
+            <li class="burger-contacts-item">
+                <a class="burger-phone" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="burger-contacts-item">
+                <a class="burger-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="social-list burger-social-list">
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="" class="social-item-link footer-icon">
+                    <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>
