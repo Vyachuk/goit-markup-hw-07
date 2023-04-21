@@ -10,6 +10,9 @@
     --light-slate: #8E8F99;
     --hero-back: rgba(46, 47, 66, 0.7);
     --anim: 250ms cubic-bezier(0, 0.79, 0.67, 1.36)
+
+    --indent: 48px;
+    --item: 1;
 }
 
 /* ============================
@@ -149,6 +152,16 @@ body {
 .btn:focus {
     background-color: #404BBF;
 }
+
+.card-set{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}    
+.card-item{
+    flex-basis: calc((100% - var(--indent) * (var(--item) - 1)) / var(--item));
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -724,6 +737,7 @@ body {
 
 .portfolio-nav-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
     margin-bottom: 72px;
@@ -750,15 +764,26 @@ body {
     background-color: #404BBF;
     border: 1px solid transparent;
 }
-
-.portfolio-card-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+.portfolio-card-list{
+    max-width: 396px;
+    --item: 1;
+    --indent: 48px;
+}
+@media screen and (min-width: 768px) {
+    .portfolio-card-list {
+        max-width: 736px;
+        --item: 2;
+        --indent: 72px 24px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .portfolio-card-list {
+        max-width: 1128px;
+        --item: 3;
+        --indent: 48px 24px;
+    }
 }
 .portfolio-card-item{
-    width: calc((100% - 48px) / 3);
     background: var(--white-color);
 }
 .portfolio-card-link{
@@ -786,6 +811,9 @@ body {
 .portfolio-img-wrap{
     position: relative;
     overflow: hidden;
+}
+.portfolio-img{
+    width: 100%;
 }
 .portfolio-overlay{
     position: absolute;
